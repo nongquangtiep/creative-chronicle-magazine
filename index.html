@@ -3,46 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tạo layout với HTML5 và CSS</title>
+    <title>Facebook Interface</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <h1>Header</h1>
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="logo">facebook</span>
+            <input type="text" placeholder="Tìm kiếm trên Facebook" class="search-box">
+        </div>
+        <div class="nav-center">
+            <button class="nav-tab active">Trang chủ</button>
+            <button class="nav-tab">Video</button>
+            <button class="nav-tab">Marketplace</button>
+            <button class="nav-tab">Nhóm</button>
+        </div>
+        <div class="nav-right">
+            <div class="profile-avatar"></div>
+        </div>
     </header>
 
-    <nav class="site-nav">
-        <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Dịch vụ</a></li>
-            <li><a href="#">Liên hệ</a></li>
-        </ul>
-    </nav>
+    <div class="main-layout">
+        <aside class="sidebar sidebar-left">
+            <ul>
+                <li class="menu-item active">Bảng nguồn cấp dữ liệu</li>
+                <li class="menu-item">Bạn bè</li>
+                <li class="menu-item">Nhóm</li>
+                <li class="menu-item">Kỷ niệm</li>
+                <li class="menu-item">Đã lưu</li>
+                <li class="menu-item">Trang</li>
+            </ul>
+        </aside>
 
-    <div class="main-container">
-        <section class="content-section">
-            <article class="main-article">
-                <h2>Bài viết chính (Article)</h2>
-                <p>Nội dung bài viết mẫu sử dụng các thẻ ngữ nghĩa của HTML5 như section, article để tối ưu hóa cấu trúc website và chuẩn SEO.</p>
+        <main class="feed-content">
+            <div class="create-post">
+                <div class="create-header">
+                    <div class="avatar-small"></div>
+                    <input type="text" placeholder="Bạn đang nghĩ gì thế?">
+                </div>
+            </div>
+
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar-small"></div>
+                    <div>
+                        <h4>Nguyễn Văn A</h4>
+                        <span class="post-time">1 giờ trước</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Hôm nay trời đẹp quá! Hoàn thành bài tập CSS layout thật mượt mà.</p>
+                </div>
+                <div class="post-actions">
+                    <button>Thích</button>
+                    <button>Bình luận</button>
+                    <button>Chia sẻ</button>
+                </div>
             </article>
 
-            <article class="sub-article">
-                <h2>Bài viết phụ (Article)</h2>
-                <p>Khu vực hiển thị thêm các thông tin chi tiết hoặc bài viết liên quan khác nằm trong phần section.</p>
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar-small"></div>
+                    <div>
+                        <h4>Frontend Developer</h4>
+                        <span class="post-time">3 giờ trước</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Thiết kế bố cục fixed header và fixed sidebar với CSS cực kỳ tiện lợi khi làm giao diện dashboard hoặc mạng xã hội.</p>
+                </div>
+                <div class="post-actions">
+                    <button>Thích</button>
+                    <button>Bình luận</button>
+                    <button>Chia sẻ</button>
+                </div>
             </article>
-        </section>
+        </main>
 
-        <aside class="sidebar">
-            <h3>Thanh bên (Aside)</h3>
-            <p>Nội dung quảng cáo, liên kết nhanh hoặc bài viết nổi bật.</p>
+        <aside class="sidebar sidebar-right">
+            <h4 class="sidebar-title">Người liên hệ</h4>
+            <ul>
+                <li class="contact-item"><span class="status-dot"></span> Trần Thị B</li>
+                <li class="contact-item"><span class="status-dot"></span> Lê Văn C</li>
+                <li class="contact-item"><span class="status-dot"></span> Phạm Minh D</li>
+                <li class="contact-item"><span class="status-dot"></span> Hoàng Lan</li>
+            </ul>
         </aside>
     </div>
-
-    <footer class="site-footer">
-        <p>Footer - Bản quyền thuộc về Website</p>
-    </footer>
 
 </body>
 </html>
