@@ -1,0 +1,52 @@
+/* Định dạng chung toàn trang */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #202122;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Tiêu đề chính */
+h1 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+}
+
+/* Phụ đề dưới tiêu đề */
+.subtitle {
+    font-size: 13px;
+    color: #54595d;
+    font-style: italic;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+/* Định dạng các đoạn văn bản: Căn đều 2 bên, thụt đầu dòng */
+p {
+    font-size: 14px;
+    text-align: justify;
+    text-indent: 30px;
+    margin-bottom: 12px;
+}
+
+/* Định dạng các liên kết */
+a {
+    color: #0645ad;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Định dạng số chú thích trên đầu dòng */
+sup {
+    font-size: 10px;
+    vertical-align: super;
+}
