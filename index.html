@@ -3,94 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Interface</title>
+    <title>Responsive Web Layout</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="navbar">
+    <nav class="navbar">
         <div class="nav-left">
-            <span class="logo">facebook</span>
-            <input type="text" placeholder="Tìm kiếm trên Facebook" class="search-box">
-        </div>
-        <div class="nav-center">
-            <button class="nav-tab active">Trang chủ</button>
-            <button class="nav-tab">Video</button>
-            <button class="nav-tab">Marketplace</button>
-            <button class="nav-tab">Nhóm</button>
+            <span class="logo">Logo</span>
+            <a href="#" class="nav-item active">Home</a>
+            <a href="#" class="nav-item">About</a>
+            <a href="#" class="nav-item">Projects</a>
+            <a href="#" class="nav-item">Contact</a>
         </div>
         <div class="nav-right">
-            <div class="profile-avatar"></div>
+            <a href="#" class="login-btn"><span class="icon">&#x27A1;</span> Login</a>
         </div>
-    </header>
+    </nav>
 
-    <div class="main-layout">
-        <aside class="sidebar sidebar-left">
-            <ul>
-                <li class="menu-item active">Bảng nguồn cấp dữ liệu</li>
-                <li class="menu-item">Bạn bè</li>
-                <li class="menu-item">Nhóm</li>
-                <li class="menu-item">Kỷ niệm</li>
-                <li class="menu-item">Đã lưu</li>
-                <li class="menu-item">Trang</li>
-            </ul>
+    <div class="main-container">
+        <aside class="sidebar-left">
+            <a href="#" class="sidebar-link">Link</a>
+            <a href="#" class="sidebar-link">Link</a>
+            <a href="#" class="sidebar-link">Link</a>
         </aside>
 
-        <main class="feed-content">
-            <div class="create-post">
-                <div class="create-header">
-                    <div class="avatar-small"></div>
-                    <input type="text" placeholder="Bạn đang nghĩ gì thế?">
-                </div>
-            </div>
-
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar-small"></div>
-                    <div>
-                        <h4>Nguyễn Văn A</h4>
-                        <span class="post-time">1 giờ trước</span>
-                    </div>
-                </div>
-                <div class="post-body">
-                    <p>Hôm nay trời đẹp quá! Hoàn thành bài tập CSS layout thật mượt mà.</p>
-                </div>
-                <div class="post-actions">
-                    <button>Thích</button>
-                    <button>Bình luận</button>
-                    <button>Chia sẻ</button>
-                </div>
-            </article>
-
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar-small"></div>
-                    <div>
-                        <h4>Frontend Developer</h4>
-                        <span class="post-time">3 giờ trước</span>
-                    </div>
-                </div>
-                <div class="post-body">
-                    <p>Thiết kế bố cục fixed header và fixed sidebar với CSS cực kỳ tiện lợi khi làm giao diện dashboard hoặc mạng xã hội.</p>
-                </div>
-                <div class="post-actions">
-                    <button>Thích</button>
-                    <button>Bình luận</button>
-                    <button>Chia sẻ</button>
-                </div>
-            </article>
+        <main class="content-area">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr>
+            <h3>Test</h3>
+            <p>Lorem ipsum...</p>
         </main>
 
-        <aside class="sidebar sidebar-right">
-            <h4 class="sidebar-title">Người liên hệ</h4>
-            <ul>
-                <li class="contact-item"><span class="status-dot"></span> Trần Thị B</li>
-                <li class="contact-item"><span class="status-dot"></span> Lê Văn C</li>
-                <li class="contact-item"><span class="status-dot"></span> Phạm Minh D</li>
-                <li class="contact-item"><span class="status-dot"></span> Hoàng Lan</li>
-            </ul>
+        <aside class="sidebar-right">
+            <div class="ad-box">
+                <p>ADS</p>
+            </div>
+            <div class="ad-box">
+                <p>ADS</p>
+            </div>
         </aside>
     </div>
+
+    <footer class="footer">
+        <p>Footer Text</p>
+    </footer>
 
 </body>
 </html>

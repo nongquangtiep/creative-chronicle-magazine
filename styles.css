@@ -5,213 +5,200 @@
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #050505;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Thanh điều hướng Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 56px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #2b2b2b;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 0 16px;
-    z-index: 1000;
+    height: 50px;
 }
 
-.nav-left {
+.nav-left, .nav-right {
     display: flex;
     align-items: center;
-    gap: 12px;
-}
-
-.logo {
-    color: #1877f2;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: -1px;
-}
-
-.search-box {
-    background-color: #f0f2f5;
-    border: none;
-    border-radius: 50px;
-    padding: 9px 16px;
-    font-size: 14px;
-    width: 220px;
-    outline: none;
-}
-
-.nav-center {
-    display: flex;
-    gap: 8px;
     height: 100%;
 }
 
-.nav-tab {
-    background: none;
-    border: none;
-    padding: 0 24px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #65676b;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
+.logo {
+    color: #9d9d9d;
+    font-size: 18px;
+    padding: 0 15px;
 }
 
-.nav-tab.active {
-    color: #1877f2;
-    border-bottom-color: #1877f2;
+.nav-item {
+    color: #9d9d9d;
+    text-decoration: none;
+    padding: 0 16px;
+    line-height: 50px;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-.nav-tab:hover {
-    background-color: #f2f2f2;
+.nav-item:hover {
+    color: #ffffff;
 }
 
-.profile-avatar {
-    width: 38px;
-    height: 38px;
-    background-color: #bbb;
-    border-radius: 50%;
+.nav-item.active {
+    background-color: #080808;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-.main-layout {
+.login-btn {
+    color: #9d9d9d;
+    text-decoration: none;
+    font-size: 14px;
     display: flex;
-    margin-top: 56px;
-    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
 }
 
-.sidebar {
-    position: fixed;
-    top: 56px;
-    bottom: 0;
-    width: 280px;
-    padding: 16px 8px;
-    overflow-y: auto;
+.login-btn:hover {
+    color: #ffffff;
+}
+
+/* Bố cục thân trang */
+.main-container {
+    display: flex;
+    flex: 1;
 }
 
 .sidebar-left {
-    left: 0;
-}
-
-.sidebar-right {
-    right: 0;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.menu-item, .contact-item {
-    padding: 10px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.menu-item:hover, .contact-item:hover {
-    background-color: #e4e6eb;
-}
-
-.menu-item.active {
-    color: #1877f2;
-}
-
-.sidebar-title {
-    color: #65676b;
-    font-size: 16px;
-    margin: 8px 12px 12px;
-}
-
-.status-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #31a24c;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-
-.feed-content {
-    margin-left: 280px;
-    margin-right: 280px;
-    padding: 20px 24px;
-    width: calc(100% - 560px);
-    max-width: 680px;
-    margin-top: 0;
-}
-
-.create-post, .post {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin-bottom: 16px;
-}
-
-.create-header, .post-header {
+    flex: 1.5;
+    background-color: #f1f1f1;
+    padding: 20px 15px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 12px;
 }
 
-.avatar-small {
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    border-radius: 50%;
-    flex-shrink: 0;
+.sidebar-link {
+    color: #337ab7;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-.create-post input {
-    width: 100%;
-    background-color: #f0f2f5;
+.sidebar-link:hover {
+    text-decoration: underline;
+}
+
+.content-area {
+    flex: 7;
+    background-color: #ffffff;
+    padding: 25px 30px;
+}
+
+.content-area h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.content-area p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.content-area hr {
     border: none;
-    border-radius: 20px;
-    padding: 10px 16px;
-    font-size: 15px;
-    outline: none;
+    border-top: 1px solid #eeeeee;
+    margin-bottom: 25px;
 }
 
-.post-header h4 {
-    font-size: 15px;
+.content-area h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
-.post-time {
-    font-size: 12px;
-    color: #65676b;
-}
-
-.post-body {
-    margin: 12px 0;
-    line-height: 1.5;
-}
-
-.post-actions {
+.sidebar-right {
+    flex: 2;
+    background-color: #f1f1f1;
+    padding: 20px;
     display: flex;
-    border-top: 1px solid #ced0d4;
-    padding-top: 8px;
-    gap: 4px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.post-actions button {
-    flex: 1;
-    background: none;
-    border: none;
-    padding: 8px;
-    border-radius: 6px;
-    font-weight: 600;
-    color: #65676b;
-    cursor: pointer;
+.ad-box {
+    border: 1px solid #e3e3e3;
+    background-color: #ffffff;
+    padding: 30px 10px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
-.post-actions button:hover {
-    background-color: #f0f2f5;
+.ad-box p {
+    font-size: 13px;
+    color: #555555;
+}
+
+/* Footer */
+.footer {
+    background-color: #555555;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Responsive Media Queries cho màn hình di động */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-item {
+        line-height: 35px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .nav-right {
+        padding: 8px 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar-left, 
+    .content-area, 
+    .sidebar-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .sidebar-left {
+        order: 1;
+    }
+
+    .content-area {
+        order: 2;
+    }
+
+    .sidebar-right {
+        order: 3;
+    }
 }
