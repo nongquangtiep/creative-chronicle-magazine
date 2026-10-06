@@ -1,98 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetricsHub - Re-architected Dashboard</title>
+    <title>Bootstrap Image Gallery</title>
 
-    <!-- Bootstrap 5.3.0 CSS cho hệ thống lưới và UI chuẩn hóa -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <!-- 1. NAVBAR: Không gian 1 chiều (1D) dùng Flexbox thích ứng theo nội dung -->
-    <header class="hub-navbar">
-        <div class="nav-brand">MetricsHub</div>
-        <nav class="nav-links">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">VeryLongGermanWordForDashboard</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div class="nav-profile">
-            <button class="btn btn-outline-light btn-sm">Profile</button>
-        </div>
+    <header class="py-5 text-center container">
+        <h1 class="fw-bold">Bộ Sưu Tập Hình Ảnh</h1>
+        <p class="lead text-muted">Responsive Image Gallery sử dụng hệ thống Bootstrap Grid System</p>
     </header>
 
-    <div class="container-fluid py-4 px-lg-5">
-
-        <!-- 2. BENTO DASHBOARD: Không gian 2 chiều (2D) dùng CSS Grid (Xóa bỏ hoàn toàn Div Soup) -->
-        <h3 class="mb-3 fw-bold">Bento Dashboard</h3>
-        <section class="bento-dashboard mb-5">
-            <div class="widget widget-chart-a">
-                <h4>Chart A</h4>
-                <p>Traffic Growth (Span 2 rows & 2 columns)</p>
-            </div>
-            <div class="widget widget-chart-b">
-                <h4>Chart B</h4>
-                <p>User Signups</p>
-            </div>
-            <div class="widget widget-chart-c">
-                <h4>Chart C</h4>
-                <p>Bounce Rate</p>
-            </div>
-            <div class="widget widget-chart-d">
-                <h4>Chart D</h4>
-                <p>Server Status</p>
-            </div>
-            <div class="widget widget-chart-e">
-                <h4>Chart E</h4>
-                <p>Conversion Rate</p>
-            </div>
-        </section>
-
-        <!-- 3. PRICING SECTION: Lưới chuẩn hóa 12 cột dùng Bootstrap 5 (col-12 col-md-4) -->
-        <h3 class="mb-3 fw-bold">Pricing Plans</h3>
-        <section class="pricing-section">
-            <div class="row g-4">
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="card-title fw-bold">Gói Cơ bản</h5>
-                            <h2 class="text-primary my-3">$9<span class="fs-6 text-muted">/tháng</span></h2>
-                            <p class="card-text text-muted flex-grow-1">Phù hợp cho cá nhân và nhóm nhỏ mới bắt đầu theo dõi số liệu.</p>
-                            <button class="btn btn-outline-primary w-100 mt-3">Chọn gói</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow border-primary">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <span class="badge bg-primary align-self-start mb-2">Phổ biến</span>
-                            <h5 class="card-title fw-bold">Gói Nâng cao</h5>
-                            <h2 class="text-primary my-3">$29<span class="fs-6 text-muted">/tháng</span></h2>
-                            <p class="card-text text-muted flex-grow-1">Mở khóa đầy đủ các tính năng báo cáo theo thời gian thực và tự động hóa.</p>
-                            <button class="btn btn-primary w-100 mt-3">Chọn gói</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="card-title fw-bold">Gói Doanh nghiệp</h5>
-                            <h2 class="text-primary my-3">$99<span class="fs-6 text-muted">/tháng</span></h2>
-                            <p class="card-text text-muted flex-grow-1">Hạ tầng chuyên biệt, SLA 99.9% và đội ngũ kỹ thuật hỗ trợ 24/7.</p>
-                            <button class="btn btn-outline-primary w-100 mt-3">Liên hệ</button>
-                        </div>
+    <main class="container pb-5">
+        <!-- Hệ thống lưới: col-12 (Mobile), col-sm-6 (Tablet), col-lg-3 (Desktop) -->
+        <div class="row g-4">
+            <!-- Ảnh 1 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 1">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Thung Lũng Hùng Vĩ</h5>
+                        <p class="card-text text-muted small">Cảnh quan thiên nhiên non nước tuyệt đẹp vào buổi sớm mai.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-    </div>
+            <!-- Ảnh 2 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 2">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Dãy Núi Tuyết</h5>
+                        <p class="card-text text-muted small">Những rặng núi tuyết phủ trắng xóa dưới ánh bình minh.</p>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Ảnh 3 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 3">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Rừng Sương Mù</h5>
+                        <p class="card-text text-muted small">Khu rừng nguyên sinh trong màn sương mờ ảo huyền bí.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 4 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 4">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Cánh Đồng Hoàng Hôn</h5>
+                        <p class="card-text text-muted small">Đồng cỏ xanh trải dài rực rỡ dưới ánh nắng chiều tà.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 5 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 5">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Con Đường Rừng</h5>
+                        <p class="card-text text-muted small">Lối mòn tĩnh lặng băng qua thung lũng mùa thu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 6 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 6">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Mùa Thu Lá Đỏ</h5>
+                        <p class="card-text text-muted small">Những tán lá chuyển sắc rực rỡ bên bờ suối chảy róc rách.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 7 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 7">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Bờ Biển Xanh</h5>
+                        <p class="card-text text-muted small">Bãi cát trắng mịn cùng làn nước biển trong vắt như ngọc bích.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 8 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&auto=format&fit=crop" class="card-img-top gallery-img" alt="Cảnh thiên nhiên 8">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Cây Cầu Cổ Kính</h5>
+                        <p class="card-text text-muted small">Cây cầu đá vắt ngang dòng suối giữa đại ngàn xanh ngắt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-4 border-top bg-white text-muted">
+        <p class="mb-0">&copy; 2026 Image Gallery - Thiết kế bằng Bootstrap 5 Grid</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
