@@ -3,51 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Layout</title>
+    <title>Phim Hoạt Hình Trực Tuyến</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-left">
-            <span class="logo">Logo</span>
-            <a href="#" class="nav-item active">Home</a>
-            <a href="#" class="nav-item">About</a>
-            <a href="#" class="nav-item">Projects</a>
-            <a href="#" class="nav-item">Contact</a>
+    <!-- Header cố định và thanh điều hướng -->
+    <header class="header-fixed">
+        <div class="header-top">
+            <div class="logo">
+                Phim<span class="logo-highlight">HoạtHình</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+                <button type="button">Tìm</button>
+            </div>
         </div>
-        <div class="nav-right">
-            <a href="#" class="login-btn"><span class="icon">&#x27A1;</span> Login</a>
-        </div>
-    </nav>
+        <nav class="head-link">
+            <a href="#" class="active">Phim hoạt hình</a>
+            <span class="separator">|</span>
+            <a href="#">Phim hoạt hình yêu thích</a>
+            <span class="separator">|</span>
+            <a href="#">Nhân vật hoạt hình</a>
+            <span class="separator">|</span>
+            <a href="#">Góp ý</a>
+        </nav>
+    </header>
 
-    <div class="main-container">
-        <aside class="sidebar-left">
-            <a href="#" class="sidebar-link">Link</a>
-            <a href="#" class="sidebar-link">Link</a>
-            <a href="#" class="sidebar-link">Link</a>
+    <!-- Thân trang chia thành 2 cột -->
+    <div class="main-wrapper">
+        <!-- Cột trái: Danh sách video -->
+        <aside class="left-content">
+            <div class="video-card active">
+                <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&auto=format&fit=crop" alt="Doraemon">
+                <div class="video-meta">
+                    <h4><a href="#">Welcome đến với khách sạn Nobi</a></h4>
+                    <span class="views">5,147,528 lượt xem</span>
+                    <span class="channel">Channel Fun</span>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=300&auto=format&fit=crop" alt="Suneo">
+                <div class="video-meta">
+                    <h4><a href="#">Suneo khổng lồ</a></h4>
+                    <span class="views">5,147,528 lượt xem</span>
+                    <span class="channel">Doraemon Vietsub</span>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=300&auto=format&fit=crop" alt="Vật thể lạ">
+                <div class="video-meta">
+                    <h4><a href="#">Còi điều khiển vật</a></h4>
+                    <span class="views">5,147,528 lượt xem</span>
+                    <span class="channel">Doraemon Vietsub</span>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&auto=format&fit=crop" alt="Kẹo bông">
+                <div class="video-meta">
+                    <h4><a href="#">Chiếc máy tạo kẹo bông</a></h4>
+                    <span class="views">5,147,528 lượt xem</span>
+                    <span class="channel">Doraemon Vietsub</span>
+                </div>
+            </div>
         </aside>
 
-        <main class="content-area">
-            <h1>Welcome</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
+        <!-- Cột phải: Video đang phát và thông tin chi tiết -->
+        <main class="right-content">
+            <div class="video-player-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Video Player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="playing-details">
+                <h2>Doraemon Ep 430 - Tớ là Mari đây & Gậy di chuyển</h2>
+                <div class="video-sub-info">
+                    <span class="views">5,147,528 lượt xem</span>
+                    <p class="author">Tác giả: Fujiko F. Fujio</p>
+                </div>
+                <div class="description">
+                    <p>Bộ phim kể về những câu chuyện thú vị xoay quanh cuộc sống hàng ngày của Nobita và chú mèo máy Doraemon đến từ thế kỷ 22 với chiếc túi thần kỳ chứa đựng nhiều bảo bối đặc biệt.</p>
+                    <p>Các tập phim được tuyển chọn với phiên bản thuyết minh tiếng Việt chuẩn, hình ảnh chất lượng cao nhằm mang lại giây phút giải trí thư giãn, giàu tính giáo dục cho các bạn nhỏ.</p>
+                    <p>Phim nhấn mạnh tình bạn, sự trung thực, lòng dũng cảm cũng như những bài học sâu sắc trong cuộc sống thường nhật.</p>
+                </div>
+            </div>
         </main>
-
-        <aside class="sidebar-right">
-            <div class="ad-box">
-                <p>ADS</p>
-            </div>
-            <div class="ad-box">
-                <p>ADS</p>
-            </div>
-        </aside>
     </div>
 
+    <!-- Chân trang -->
     <footer class="footer">
-        <p>Footer Text</p>
+        <p>&copy; 2017 - Thiết kế web bởi trang hoathinhvn.net</p>
     </footer>
 
 </body>
