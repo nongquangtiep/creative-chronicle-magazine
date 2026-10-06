@@ -1,52 +1,116 @@
-/* Định dạng chung toàn trang */
+/* Thiết lập chung và font chữ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    color: #202122;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 15px;
+    background-color: #f7f5f0;
+    color: #333333;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt khi click mục lục */
 }
 
-/* Tiêu đề chính */
-h1 {
+/* Khung chứa trung tâm */
+.container {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 25px 35px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+/* Bước 4: Căn chỉnh ảnh truyện ở đầu trang */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.story-cover {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Bước 7: Định dạng font, màu sắc và căn giữa tiêu đề */
+.story-title {
+    font-family: "Georgia", serif;
     font-size: 28px;
-    font-weight: normal;
-    margin-bottom: 2px;
-    border-bottom: 1px solid #a2a9b1;
-    padding-bottom: 5px;
+    color: #8b3a2b;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
-/* Phụ đề dưới tiêu đề */
-.subtitle {
-    font-size: 13px;
-    color: #54595d;
+.story-author {
     font-style: italic;
-    margin-top: 2px;
-    margin-bottom: 15px;
+    color: #666666;
+    font-size: 15px;
 }
 
-/* Định dạng các đoạn văn bản: Căn đều 2 bên, thụt đầu dòng */
-p {
-    font-size: 14px;
-    text-align: justify;
-    text-indent: 30px;
+/* Bước 8: Định dạng khối mục lục (border, background-color, padding) */
+.table-of-contents {
+    background-color: #fdfbf7;
+    border: 1px solid #e0d8c7;
+    border-left: 5px solid #8b3a2b;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 35px;
+}
+
+.table-of-contents h3 {
     margin-bottom: 12px;
+    color: #4a3b32;
+    font-size: 18px;
 }
 
-/* Định dạng các liên kết */
-a {
-    color: #0645ad;
+.table-of-contents ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.table-of-contents li {
+    margin-bottom: 8px;
+}
+
+/* Bước 5 & Bước 8: Dùng h5 cho mục lục và hiệu ứng hover cho liên kết */
+.table-of-contents h5 {
+    display: inline;
+    font-weight: 500;
+}
+
+.table-of-contents h5 a {
+    color: #2b547e;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-a:hover {
+.table-of-contents h5 a:hover {
+    color: #c0392b;
     text-decoration: underline;
 }
 
-/* Định dạng số chú thích trên đầu dòng */
-sup {
-    font-size: 10px;
-    vertical-align: super;
+/* Bước 9: Canh lề và giãn dòng cho các đoạn văn bản thân truyện */
+.chapter {
+    margin-bottom: 40px;
+}
+
+.chapter h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #dcdcdc;
+    padding-bottom: 8px;
+}
+
+.chapter p {
+    font-size: 16px;
+    line-height: 1.8;       /* Giãn dòng thông thoáng */
+    text-align: justify;    /* Canh đều hai lề */
+    text-indent: 30px;      /* Thụt đầu dòng đoạn văn */
+    margin-bottom: 14px;
+    color: #3b3a36;
 }
